@@ -34,6 +34,8 @@ function App() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
   const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -54,13 +56,6 @@ function App() {
           darkMode ? "bg-indigo-900	 text-white" : "bg-blue-500 text-gray-900"
         }`}
       >
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between ">
-          <div className="flex items-center">
-            <img src={Logoblack} alt="Daily News" className="h-8 w-8 mr-2" />
-            <a href="/" className="text-white font-bold text-xl mx-2">
-              Daily News&#8482;
-            </a> */}
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* <img
             src={darkMode ? Logoblack : LogoWhite}
@@ -74,19 +69,31 @@ function App() {
             <a href="/" className="text-white mr-4 font-bold text-base mx-2">
               Home
             </a>
-            <a href="/" className="text-white mr-4 font-bold text-base mx-2">
+            <a
+              href="/products"
+              className="text-white mr-4 font-bold text-base mx-2"
+            >
               Products
             </a>
-            <a href="/" className="text-white mr-4 font-bold text-base mx-2">
+            <a href="/men" className="text-white mr-4 font-bold text-base mx-2">
               Men
             </a>
-            <a href="/" className="text-white mr-4 font-bold text-base mx-2">
+            <a
+              href="/women"
+              className="text-white mr-4 font-bold text-base mx-2"
+            >
               Women
             </a>
-            <a href="/" className="text-white mr-4 font-bold text-base mx-2">
+            <a
+              href="/jewellery"
+              className="text-white mr-4 font-bold text-base mx-2"
+            >
               Jewellery
             </a>
-            <a href="/" className="text-white mr-4 font-bold text-base mx-2">
+            <a
+              href="/electronics"
+              className="text-white mr-4 font-bold text-base mx-2"
+            >
               Electronics
             </a>
             <a href="/" className="text-white mr-4 font-bold text-base mx-2">
@@ -179,6 +186,9 @@ function App() {
       </div>
 
       {/* Product List */}
+      <h1 className="text-center text-3xl font-bold uppercase my-4">
+        ALL ITEMS
+      </h1>
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {products.map((product) => (
